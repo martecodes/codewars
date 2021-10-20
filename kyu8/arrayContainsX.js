@@ -1,7 +1,4 @@
-function check(a, x) {
-    if(a.includes(x)){
-      return true
-    }else{
-      return false
-    }
-  }
+const check = (a, x) => {
+    return a.includes(x) ? true : false
+ }
+//checking is a contains x
