@@ -7,3 +7,5 @@ function solution(number){
     }
     return counter
 }
+
+console.log(solution(717));
