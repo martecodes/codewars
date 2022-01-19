@@ -1,4 +1,5 @@
-const lengthOfLongestSubstring = (s) =>{
+// MAP
+const lengthOfLongestSubstringMap = (s) =>{
     let max = 0
     let begin = 0
     let map = {}
@@ -22,13 +23,26 @@ const lengthOfLongestSubstring = (s) =>{
     return max
 }
 
-/*
-s = "ab00ghed"
+// SET
+const lengthOfLongestSubstringSet = (s) => {
+    let mySet = new Set()
+    let left = 0
+    let right = 0
+    let maxSubStringLength = 0
 
-begin = 0
-end = 0
+    while(right < s.length){
+        if(!mySet.has(s.charAt(right))){
+            mySet.add(s.charAt(right))
+            maxSubStringLength = Math.max(maxSubStringLength, mySet.size)
+            right++
+        }else{
+            mySet.delete(s.charAt(left))
+            left++
+        }
+    }
 
-substring = "a"
-*/
+    return maxSubStringLength
+    
+}
 
-console.log(lengthOfLongestSubstring("abcbbcad"))
+console.log(lengthOfLongestSubstringSet("abcab"))
