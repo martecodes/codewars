@@ -44,5 +44,3 @@ const lengthOfLongestSubstringSet = (s) => {
     return maxSubStringLength
     
 }
-
-console.log(lengthOfLongestSubstringSet("abcab"))
